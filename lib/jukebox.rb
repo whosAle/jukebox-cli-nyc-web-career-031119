@@ -54,7 +54,8 @@ def run
     else
       puts "Please use valid command."
     end
-
+    puts "Please enter a command:"
+    command = gets.chomp
   end
 
 end

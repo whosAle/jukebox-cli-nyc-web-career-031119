@@ -38,12 +38,40 @@ def play(my_songs)
   #if it is, play the song using the system 'open <file path>' syntax
   #get the file path of the song by looking it up in the my_songs hash
 
+  puts "Please enter a song name:"
+  name = gets.chomp
+  if songs.include?(name)
+    puts "Playing #{name}"
+    open my_songs[name]
+  else
+    puts "Invalid input, please try again"
+  end
+
 end
 
 def exit_jukebox
-  #this method is the same as in jukebox.rb
+  puts "Goodbye"
 end
 
-def run(my_songs)
-  #this method is the same as in jukebox.rb
+def run(songs)
+  help
+  puts "Please enter a command:"
+  command = gets.chomp
+
+  while command != "exit"
+    case command
+    when "help"
+      help
+    when "list"
+      list(songs)
+    when "play"
+      play(songs)
+    else
+      puts "Please use valid command."
+    end
+    puts "Please enter a command:"
+    command = gets.chomp
+  end
+  exit_jukebox
+
 end

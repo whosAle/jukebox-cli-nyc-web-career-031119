@@ -40,7 +40,7 @@ def play(my_songs)
 
   puts "Please enter a song name:"
   name = gets.chomp
-  if songs.include?(name)
+  if my_songs.include?(name)
     puts "Playing #{name}"
     open my_songs[name]
   else

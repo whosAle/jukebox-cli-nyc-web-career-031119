@@ -34,7 +34,7 @@ def list (songs)
   songs.each_with_index { |song, ind| puts "#{ind+1}. #{song}" }
 end
 
-def exit
+def exit_jukebox
   puts "Goodbye"
 end
 
@@ -57,6 +57,6 @@ def run(songs)
     puts "Please enter a command:"
     command = gets.chomp
   end
-  exit
+  exit_jukebox
 
 end

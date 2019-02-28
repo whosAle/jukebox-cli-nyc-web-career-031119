@@ -42,7 +42,7 @@ def play(my_songs)
   name = gets.chomp
   if my_songs.include?(name)
     puts "Playing #{name}"
-    start my_songs[name]
+    open my_songs[name]
   else
     puts "Invalid input, please try again"
   end

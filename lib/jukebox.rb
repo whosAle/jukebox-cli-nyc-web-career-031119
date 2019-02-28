@@ -23,7 +23,7 @@ def play(songs)
   name = gets.chomp
   if 0 < name.to_i && name.to_i < 10
     puts "Playing #{songs[name.to_i-1]}"
-  elsif song.includes?(name)
+  elsif songs.includes?(name)
     puts "Playing #{name}"
   else
     puts "Invalid input, please try again"

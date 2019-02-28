@@ -35,5 +35,26 @@ def list (songs)
 end
 
 def exit
+  puts "Goodbye"
+end
+
+def run
+  help
+  puts "Please enter a command:"
+  command = gets.chomp
+
+  while command != "exit"
+    case command
+    when "help"
+      help
+    when "list"
+      list(songs)
+    when "play"
+      play(songs)
+    else
+      puts "Please use valid command."
+    end
+
+  end
 
 end

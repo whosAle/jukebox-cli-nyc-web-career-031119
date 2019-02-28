@@ -38,7 +38,7 @@ def exit
   puts "Goodbye"
 end
 
-def run
+def run(songs)
   help
   puts "Please enter a command:"
   command = gets.chomp
